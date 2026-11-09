@@ -36,7 +36,7 @@ If this is the main GitHub Pages site for your account:
 
 ### Option 2 — project site
 If this is a project site:
-- create a repository, for example: `tennis-score-tracker-landing-page`
+- create a repository, for example: `self-operated-tennis-score-landing-page`
 - upload all files
 - in GitHub: **Settings → Pages**
 - under **Build and deployment**, choose:
@@ -46,7 +46,7 @@ If this is a project site:
 Your site will publish at:
 
 ```text
-https://yourusername.github.io/tennis-score-tracker-landing-page/
+https://yourusername.github.io/self-operated-tennis-score-landing-page/
 ```
 
 ## Things you should customise
@@ -64,26 +64,26 @@ If your app URL changes, update all **Open the App** links in `index.html`.
 Inside `index.html`, replace:
 
 ```html
-<meta property="og:url" content="https://yourusername.github.io/tennis-score-tracker/" />
+<meta property="og:url" content="https://yourusername.github.io/self-operated-tennis-score/" />
 ```
 
 with your real GitHub Pages URL.
 
-### 3. Feedback form embed
-The **Feedback** section currently contains a placeholder block.
-Replace the placeholder with your embedded form code from services such as:
-- Tally
-- Typeform
-- Google Forms
-- Jotform
+### 3. Google Form link
+The **Feedback** section uses a button that opens your Google Form in a new tab.
 
-Search for this block in `index.html`:
+Search for this placeholder in `index.html`:
 
-```html
-<div class="feedback-placeholder">
+```text
+PASTE_YOUR_GOOGLE_FORM_URL_HERE
 ```
 
-You can also replace the sample `.feedback-embed` block with an `iframe` embed.
+Replace it with your published Google Form URL, for example:
+
+```text
+https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform
+```
+
 
 ### 4. App store badges
 The Android and iOS blocks are currently set to **Coming Soon**. You can replace them later with actual store badges/links once native apps are published.
