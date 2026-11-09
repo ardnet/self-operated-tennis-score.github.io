@@ -608,3 +608,18 @@ p { margin: 0 0 1rem; }
     width: 100%;
   }
 }
+
+
+/* Analytics-enabled Coming Soon store badges remain visually identical to cards. */
+.interest-button {
+  appearance: none;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.interest-button:hover,
+.interest-button:focus-visible {
+  border-color: var(--border-strong);
+  transform: translateY(-1px);
+}

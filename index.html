@@ -63,12 +63,12 @@
         </button>
 
         <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
-          <a href="#features">Features</a>
-          <a href="#screenshots">Screenshots</a>
-          <a href="#story">Story</a>
-          <a href="#download">Download</a>
-          <a href="#feedback">Feedback</a>
-          <a class="btn btn-primary nav-cta" href="https://melodious-treacle-c952b1.netlify.app/" target="_blank" rel="noopener">Open the App</a>
+          <a href="#features" data-ga-event="nav_section_clicked" data-ga-section="features">Features</a>
+          <a href="#screenshots" data-ga-event="nav_section_clicked" data-ga-section="screenshots">Screenshots</a>
+          <a href="#story" data-ga-event="nav_section_clicked" data-ga-section="story">Story</a>
+          <a href="#download" data-ga-event="nav_section_clicked" data-ga-section="download">Download</a>
+          <a href="#feedback" data-ga-event="nav_section_clicked" data-ga-section="feedback">Feedback</a>
+          <a class="btn btn-primary nav-cta" data-ga-event="open_app_clicked" data-ga-location="header" href="https://melodious-treacle-c952b1.netlify.app/" target="_blank" rel="noopener">Open the App</a>
         </nav>
       </div>
     </header>
@@ -85,8 +85,8 @@
               tie-breaks, live scoreboard sharing, and full score history.
             </p>
             <div class="hero-actions">
-              <a class="btn btn-primary" href="https://melodious-treacle-c952b1.netlify.app/" target="_blank" rel="noopener">Open the App</a>
-              <a class="btn btn-secondary" href="#screenshots">View Screenshots</a>
+              <a class="btn btn-primary" data-ga-event="open_app_clicked" data-ga-location="hero" href="https://melodious-treacle-c952b1.netlify.app/" target="_blank" rel="noopener">Open the App</a>
+              <a class="btn btn-secondary" data-ga-event="view_screenshots_clicked" data-ga-location="hero" href="#screenshots">View Screenshots</a>
             </div>
             <ul class="hero-highlights" aria-label="Key highlights">
               <li>Free to use</li>
@@ -132,7 +132,7 @@
         </div>
       </section>
 
-      <section id="features" class="section">
+      <section id="features" class="section" data-ga-section-view="features">
         <div class="container">
           <div class="section-heading reveal">
             <div class="eyebrow">Features</div>
@@ -187,7 +187,7 @@
         </div>
       </section>
 
-      <section id="story" class="section story-section">
+      <section id="story" class="section story-section" data-ga-section-view="story">
         <div class="container story-grid">
           <div class="story-copy reveal">
             <div class="eyebrow">The idea behind the app</div>
@@ -212,7 +212,7 @@
         </div>
       </section>
 
-      <section id="screenshots" class="section screenshots-section">
+      <section id="screenshots" class="section screenshots-section" data-ga-section-view="screenshots">
         <div class="container">
           <div class="section-heading reveal">
             <div class="eyebrow">Screenshots</div>
@@ -237,7 +237,7 @@
         </div>
       </section>
 
-      <section class="section live-scoreboard-section">
+      <section class="section live-scoreboard-section" data-ga-section-view="live_scoreboard">
         <div class="container live-grid">
           <div class="live-visual reveal">
             <img src="assets/images/hero_match_complete.webp" alt="Large live scoreboard showing a completed doubles match." loading="lazy" />
@@ -259,7 +259,7 @@
         </div>
       </section>
 
-      <section id="download" class="section download-section">
+      <section id="download" class="section download-section" data-ga-section-view="download">
         <div class="container">
           <div class="download-card reveal">
             <div class="download-copy">
@@ -271,17 +271,17 @@
               </p>
             </div>
             <div class="download-actions">
-              <a class="btn btn-primary" href="https://melodious-treacle-c952b1.netlify.app/" target="_blank" rel="noopener">Open Web App</a>
+              <a class="btn btn-primary" data-ga-event="open_app_clicked" data-ga-location="download_section" href="https://melodious-treacle-c952b1.netlify.app/" target="_blank" rel="noopener">Open Web App</a>
               <div class="store-badges" aria-label="Native app store availability">
-                <div class="store-badge soon"><span class="store-icon">🤖</span><span><strong>Android</strong><small>Coming Soon</small></span></div>
-                <div class="store-badge soon"><span class="store-icon"></span><span><strong>iOS</strong><small>Coming Soon</small></span></div>
+                <button type="button" class="store-badge soon interest-button" data-ga-event="native_app_interest" data-ga-platform="android" aria-label="Android app coming soon"><span class="store-icon">🤖</span><span><strong>Android</strong><small>Coming Soon</small></span></button>
+                <button type="button" class="store-badge soon interest-button" data-ga-event="native_app_interest" data-ga-platform="ios" aria-label="iOS app coming soon"><span class="store-icon"></span><span><strong>iOS</strong><small>Coming Soon</small></span></button>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="feedback" class="section feedback-section">
+      <section id="feedback" class="section feedback-section" data-ga-section-view="feedback">
         <div class="container">
           <div class="feedback-panel reveal">
             <div class="feedback-panel-icon" aria-hidden="true">✉</div>
@@ -297,7 +297,7 @@
             </div>
             <div class="feedback-panel-action">
               <a
-                class="btn btn-primary feedback-button"
+                class="btn btn-primary feedback-button" data-ga-event="feedback_form_clicked" data-ga-location="feedback_section"
                 href="https://forms.gle/mDHQjLGcZRhnmVfm7"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -319,8 +319,8 @@
             <p>Make scoring simpler, clearer, and easier to share.</p>
           </div>
           <div class="cta-actions">
-            <a class="btn btn-primary" href="https://melodious-treacle-c952b1.netlify.app/" target="_blank" rel="noopener">Open the App</a>
-            <a class="btn btn-secondary" href="#feedback">Send Feedback</a>
+            <a class="btn btn-primary" data-ga-event="open_app_clicked" data-ga-location="bottom_cta" href="https://melodious-treacle-c952b1.netlify.app/" target="_blank" rel="noopener">Open the App</a>
+            <a class="btn btn-secondary" data-ga-event="feedback_section_clicked" data-ga-location="bottom_cta" href="#feedback">Send Feedback</a>
           </div>
         </div>
       </section>
@@ -342,6 +342,7 @@
       </div>
     </footer>
 
+    <script src="analytics.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

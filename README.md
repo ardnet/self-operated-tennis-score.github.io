@@ -108,3 +108,34 @@ This landing page already includes:
 - Add analytics (for example Plausible or Google Analytics)
 - Add a screenshot lightbox gallery
 - Add testimonial or user feedback section
+
+
+## Google Analytics 4 (GA4)
+
+The landing page now includes optional GA4 tracking.
+
+1. Create a GA4 property and a **Web** data stream for your GitHub Pages URL.
+2. Copy the Measurement ID, which looks like `G-ABC1234567`.
+3. Open `analytics.js`.
+4. Replace:
+
+```js
+const GA4_MEASUREMENT_ID = 'G-XXXXXXXXXX';
+```
+
+with your real Measurement ID.
+
+If you leave the placeholder unchanged, Analytics remains disabled and the page works normally.
+
+### Events included
+
+- `open_app_clicked` — Open App / Open Web App CTA
+- `view_screenshots_clicked` — hero screenshot CTA
+- `feedback_form_clicked` — Google Form button
+- `feedback_section_clicked` — bottom CTA to feedback section
+- `native_app_interest` — Android or iOS Coming Soon badge clicked
+- `nav_section_clicked` — navigation links
+- `section_viewed` — major page sections viewed
+
+Event parameters are deliberately non-personal, such as `location`, `section_name`, and `platform`.
+Do not add visitor names, email addresses, player names, match codes, or scoreboard URLs to GA4 events.

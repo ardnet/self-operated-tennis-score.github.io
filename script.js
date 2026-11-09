@@ -36,3 +36,35 @@ if ('IntersectionObserver' in window && revealElements.length) {
 } else {
   revealElements.forEach((el) => el.classList.add('in-view'));
 }
+
+
+// ---------- GA4 landing-page event tracking ----------
+document.addEventListener('click', (event) => {
+  const target = event.target.closest('[data-ga-event]');
+  if (!target || typeof window.trackAnalyticsEvent !== 'function') return;
+
+  const params = {};
+  if (target.dataset.gaLocation) params.location = target.dataset.gaLocation;
+  if (target.dataset.gaSection) params.section_name = target.dataset.gaSection;
+  if (target.dataset.gaPlatform) params.platform = target.dataset.gaPlatform;
+
+  window.trackAnalyticsEvent(target.dataset.gaEvent, params);
+});
+
+const analyticsSections = document.querySelectorAll('[data-ga-section-view]');
+if ('IntersectionObserver' in window && analyticsSections.length) {
+  const analyticsSectionObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting || typeof window.trackAnalyticsEvent !== 'function') return;
+        window.trackAnalyticsEvent('section_viewed', {
+          section_name: entry.target.dataset.gaSectionView
+        });
+        analyticsSectionObserver.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.5 }
+  );
+
+  analyticsSections.forEach((section) => analyticsSectionObserver.observe(section));
+}
