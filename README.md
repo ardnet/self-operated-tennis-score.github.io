@@ -55,7 +55,7 @@ https://yourusername.github.io/self-operated-tennis-score-landing-page/
 Currently, the page links to:
 
 ```text
-https://melodious-treacle-c952b1.netlify.app/
+https://selfop-tennis-score-app.onrender.com
 ```
 
 If your app URL changes, update all **Open the App** links in `index.html`.
